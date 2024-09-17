@@ -19,6 +19,8 @@ void print_hello() {
 			cin >> str;
 
 			if (str == "off") {
+				file << "program completed successfully.";
+				file.close();
 				break;
 			}
 
