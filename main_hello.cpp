@@ -15,7 +15,7 @@ void print_hello() {
 
 		while (true){
 			string str;
-			cout << "Write your text (or off progr. with 'off')"; ";
+			cout << "Write your text (or off progr. with 'off'): ";
 			cin >> str;
 
 			if (str == "off") {
