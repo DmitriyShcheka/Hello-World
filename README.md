@@ -5,4 +5,18 @@
 #gmail: st129457@student.spbu.ru
 #	egor.shast0.0@gmail.com
 
-#bulging a program using make
+
+
+
+#		How start the program:
+
+#bulging a program using "make"
+#then write "./main" to run the program
+#to complete click "Ctrl+C"s
+#after, if you want, write "make clean" to clear files like /.o
+
+
+
+#Thank you for using my program
+
+#15-17.07.2024    @All rights reserved
