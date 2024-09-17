@@ -1,15 +1,18 @@
-CC = g++
-CFLAGS = -Wall
-TARGET = hello
-SRC = hello.cpp
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall
+TARGET = main
 
-all: $(TARGET) run
+SRCS = main.cpp main_hello.cpp
 
-$(TARGET): $(SRC)
-	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
+OBJS = $(SRCS:.cpp=.o)
 
-run: $(TARGET)
-	./$(TARGET)
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(OBJS) $(TARGET)
