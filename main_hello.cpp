@@ -15,8 +15,13 @@ void print_hello() {
 
 		while (true){
 			string str;
-			cout << "Write your text: ";
+			cout << "Write your text (or off progr. with 'off')": ";
 			cin >> str;
+
+			if (str == "off") {
+				break;
+			}
+
 			cout << "Hello, " << str << "!" << endl;
 
 			file << "user write text:" << str << "\n";
