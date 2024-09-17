@@ -10,8 +10,8 @@ void print_hello() {
 	if (file.is_open()){
 		cout << "Hello, world!" << endl;
 
-		file << "Program was started.\n\n";
-		file << "print_hello was called.\n";
+		file << "Program was started.\n-----------------\n";
+		file << "print_hello was called.\n------------------\n\n\n";
 
 		while (true){
 			string str;
@@ -19,15 +19,15 @@ void print_hello() {
 			cin >> str;
 
 			if (str == "off") {
-				file << "program completed successfully.";
+				file << "program completed successfully.\n-------------------\n\n";
 				file.close();
 				break;
 			}
 
 			cout << "Hello, " << str << "!" << endl;
 
-			file << "user write text:" << str << "\n";
-			file << "program completed successfully.\ncucle update.\n";
+			file << "\nuser write text:" << str << "\n";
+			file << "\nprogram completed successfully.\ncucle update.\n--------------\n";
 		}
 		file.close();
 	} else {
