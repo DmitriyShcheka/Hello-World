@@ -1,14 +1,15 @@
 CC = g++
 CFLAGS = -Wall
 TARGET = hello
+SRC = hello.cpp
 
-all: $(TARGET)
+all: $(TARGET) run
 
-$(TARGET): hello.o
-	$(CC) $(CFLAGS) -o $(TARGET) hello.o
+$(TARGET): $(SRC)
+	$(CC) $(CFLAGS) -o $(TARGET) $(SRC)
 
-hello.o: hello.cpp hello.h
-	$(CC) $(CFLAGS) -c hello.cpp
+run: $(TARGET)
+	./$(TARGET)
 
 clean:
-	rm -f *.o $(TARGET)
+	rm -f $(TARGET)
